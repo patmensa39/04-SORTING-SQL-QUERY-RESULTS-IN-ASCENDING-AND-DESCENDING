@@ -1,0 +1,73 @@
+-- 05 SORTING QUERY RESULTS/ ARRANGING COLUMNS IN ASCENDING  AND DESCENDING ORDER  BY USING "ORDER BY "
+--ASCENDING ORDER IS THE DEFAULT
+
+/* This query sort the customers last name in ascensding order*/
+SELECT
+    FirstName AS 'Customer First Name',
+    LastName AS 'Customer Last Name',
+    Phone AS 'Customer Phone Number',
+    Email AS 'Customer Email Address'
+FROM
+    Customer
+ORDER BY
+    LastName 
+    
+
+--Another way is to use the word "ASC
+
+SELECT
+    FirstName AS 'Customer First Name',
+    LastName AS 'Customer Last Name',
+    Phone AS 'Customer Phone Number',
+    Email AS 'Customer Email Address'
+FROM
+    Customer
+ORDER BY
+    LastName ASC
+
+
+/* This query sort the customers last name in descensding order using DESC*/
+SELECT
+    FirstName AS 'Customer First Name',
+    LastName AS 'Customer Last Name',
+    Phone AS 'Customer Phone Number',
+    Email AS 'Customer Email Address'
+FROM
+    Customer
+ORDER BY
+    LastName DESC
+
+    
+/* This query sort the customers first name in ascending order and  last name in descensding order using DESC*/
+SELECT
+    FirstName AS 'Customer First Name',
+    LastName AS 'Customer Last Name',
+    Phone AS 'Customer Phone Number',
+    Email AS 'Customer Email Address'
+FROM
+    Customer
+ORDER BY
+    FirstName ASC,
+    LastName DESC
+    
+
+-- Using the Execute SQL tab, compose the SQL query that answers the following question: How many Customer LastNames start with G?
+SELECT 
+  LastName AS [Customer Last Name]
+FROM 
+    Customer
+ORDER BY
+    LastName ASC
+    
+--Therefore the answer is 7
+
+--In the Execute SQL tab of DB Browser for SQLite, how many tracks in the WSDA music database do not have a composer listed?
+--Answer using the code 
+SELECT 
+    Composer 
+FROM 
+    Track
+ORDER BY 
+    Composer DESC
+
+--Therefore the answer is 44
